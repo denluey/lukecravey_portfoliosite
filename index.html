@@ -134,20 +134,35 @@
 	    ]
 	  },
 	  "Robo Cave Adventure": {
-	    text: "Simple platforming game about a broken robot escaping a cave",
-	    image: "images/jetpack.gif"
-	  },
+  text: `
+    Simple platforming game about a broken robot escaping a cave<br><br>
+    <a href="https://denluey.itch.io/roboalone" target="_blank" style="color: lightblue; text-decoration: underline;">
+      Play Robo Alone on itch.io
+    </a>
+  `,
+  image: "images/jetpack.gif"
+},
 	  "Talking is Hard": {
-	    text: "A game about the difficulty of conversing with other people",
-	    image: "images/talk.gif"
-	  },
+  text: `
+    A game about the difficulty of conversing with other people<br><br>
+    <a href="https://denluey.itch.io/talking-is-hard" target="_blank" style="color: lightblue; text-decoration: underline;">
+      Play Talking Is Hard on itch.io
+    </a>
+  `,
+  image: "images/talk.gif"
+},
 	  "Skijoring": {
-	    text: "In progress game about a skier being pulled down a mountain by a friend on a snowmobile",
-	    images: [
-	      "images/skijor1.png",
-	      "images/skijor2.jpg"
-	    ]
-	  }
+  text: `
+    In progress game about a skier being pulled down a mountain by a friend on a snowmobile<br><br>
+    <a href="https://store.steampowered.com/app/4023240/Skijoring/" target="_blank" style="color: lightblue; text-decoration: underline;">
+      View Skijoring on Steam
+    </a>
+  `,
+  images: [
+    "images/skijor1.png",
+    "images/skijor2.jpg"
+  ]
+},
 	};
 
 	function addPanelTrigger(selector) {
@@ -157,7 +172,7 @@
 	      el.addEventListener('click', e => {
 	        e.preventDefault();
 	        title.textContent = name;
-	        text.textContent = sectionInfo[name].text;
+	        text.innerHTML = sectionInfo[name].text;
 
 	        // Remove any previous gallery
 	        document.getElementById('imageGallery')?.remove();
